@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>transfer.ico</file>
+        <file>logo.ico</file>
+        <file>invesment.ico</file>
+        <file>exchange.ico</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>house.ico</file>
+        <file>transfer.ico</file>
+        <file>logo.ico</file>
+        <file>invesment.ico</file>
+        <file>exchange.ico</file>
+        <file>loan.ico</file>
+        <file>accounts.ico</file>
+        <file>3945782_1.ico</file>
+        <file>ex.ico</file>
+        <file>loa.ico</file>
+        <file>eeuro.ico</file>
+        <file>dolarr.ico</file>
+        <file>tl.ico</file>
+        <file>cir.png</file>
+    </qresource>
+</RCC>
