@@ -42,8 +42,6 @@ void SignupDialog::on_signupButton_clicked()
 
 
 
-
-
     QString name = ui->lineEdit_name->text();
     QString surname = ui->lineEdit_surname->text();
     QString id = ui->lineEdit_id->text();
@@ -96,26 +94,28 @@ void SignupDialog::on_signupButton_clicked()
         QString recovery = createRecovery();
 
         QString str,temp;
+
+
+        qDebug()<<"PROBLEM ABOUT STRING OR ANYTHING";
         int counterID = Account().getCounterID();
-        str.append(temp.setNum(counterID));
-        qDebug()<<temp;
-        Account().createAccount(temp,id,"TL");
+        str.setNum(counterID);
+        Account().createAccount(QString::number(counterID),id,"TL");
         str.append(',');
-        temp.clear();
-        str.append(temp.setNum(counterID+1));
-        qDebug()<<temp;
-        Account().createAccount(temp,id,"USD");
-        qDebug()<<temp;
+        str.append(QString::number(counterID+1));
+
+        Account().createAccount(QString::number(counterID+1),id,"USD");
         str.append(',');
-        temp.clear();
-        str.append(temp.setNum(counterID+2));
-        qDebug()<<temp;
-        Account().createAccount(temp,id,"EUR");
+
+        str.append(QString::number(counterID+2));
+        qDebug()<<str;
+
+        Account().createAccount(QString::number(counterID+2),id,"EUR");
         str.append(',');
-        temp.clear();
-        str.append(temp.setNum(counterID+3));
-        qDebug()<<temp;
-        InvAccount().createAccount(temp);
+
+        str.append(QString::number(counterID+3));
+        qDebug()<<str;
+        Account().createAccount(QString::number(counterID+3),id,"INV");
+        InvAccount().createAccount(QString::number(counterID+3));
         str.append(';');
 
 
